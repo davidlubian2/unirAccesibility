@@ -1,7 +1,5 @@
 # Metodología para el seguimiento en profundidad de la accesibilidad del sitio web UNIR
 
-$${\color{red}Welcome}$$
-
 ## 1.	Consideraciones previas
 
 Para la elaboración de esta metodología se han utilizado las siguientes herramientas:
@@ -65,33 +63,33 @@ El contenido no textual, como imágenes, iconos y gráficos, debe tener alternat
 - Imágenes informativas. Las imágenes que contienen información relevante deben tener un atributo «alt» que describa claramente su contenido. Esta práctica es fundamental para que los usuarios de lectores de pantalla puedan comprender la información presentada a través de imágenes.
 
 Ejemplo:
-
+```html
     <img src="logo_unir.png" alt="UNIR La Universidad en Internet">
-
+```
 - Iconos funcionales. Los iconos que sirven como botones o enlaces deben tener un «alt» descriptivo que indique su función. Esto es especialmente importante para iconos que realizan acciones específicas o llevan a otras páginas.
 
 Ejemplo:
-
+```html
     <img src="icono_whatsapp.png" alt="WhatsApp">
-  
+ ``` 
 - Imágenes decorativas. Las imágenes decorativas, que no aportan información esencial, deben tener un «alt» vacío (alt="") para que los lectores de pantalla las ignoren. Esto ayuda a evitar distracciones y asegura que los usuarios se centren en el contenido relevante.
 
 Ejemplo:
-
+```html
     <img src="decorativa.png" alt="">
-  
+  ```
 - Diagramas y gráficos. Los diagramas y gráficos deben ir acompañados de descripciones textuales detalladas que expliquen la información representada. Estas descripciones pueden incluirse en el texto alternativo o en un párrafo adyacente.
 
 Ejemplo:
-
+```html
     <img src="grafico_ventas.png" alt="Gráfico de ventas anuales mostrando un incremento del 20% en 2024">
- 
+ ```
 - Uso de «aria-label» y «aria-describedby». En casos donde el atributo «alt» no es suficiente para describir la función de un elemento, se pueden utilizar los atributos «aria-label» y «aria-describedby» para proporcionar descripciones adicionales.
 
 Ejemplo:
-
+```html
     <button aria-label="Cerrar ventana">X</button>
-
+```
 En todo caso, todo el contenido no textual debe disponer del atributo «alt», aunque éste esté vacío.
 
 ##### 9.1.3.1 Información y relaciones
@@ -101,26 +99,26 @@ La estructura de la información y las relaciones entre los elementos de la pág
 - Encabezados jerárquicos. Utilizar encabezados (\<h1>, \<h2>, etc.) de manera jerárquica y lógica es esencial para crear una estructura clara y navegable. Cada página debe tener un solo encabezado \<h1> que represente el título principal, seguido de \<h2>, \<h3>, y así sucesivamente, sin saltos de nivel.
 
 Ejemplo:
-
+```html
     <h1>Título principal</h1>
     <h2>Subtítulo 1</h2>
     <h3>Subtítulo 1.1</h3>
     <h2>Subtítulo 2</h2>
-
+```
 - Listas ordenadas y no ordenadas. Utilizar etiquetas de listas (\<ul>, \<ol>, \<li>) para agrupar elementos relacionados facilita la comprensión y la navegación. Las listas deben estar correctamente anidadas y utilizar la etiqueta apropiada según el contexto.
 
 Ejemplo:
-
+```html
     <ul>
       <li>Grado en Ingeniería Informática</li>
       <li>Grado en Logística</li>
       <li>Grado en Ingeniería Química</li>
     </ul>
-
+```
 - Tablas semánticas. Las tablas de datos deben utilizar etiquetas semánticas (\<table>, \<thead>, \<tbody>, \<tr>, \<th>, \<td>) para definir su estructura y facilitar la navegación. Los encabezados de las tablas (\<th>) deben estar claramente definidos y, si es necesario, asociados con las celdas correspondientes utilizando el atributo «scope».
 
 Ejemplo:
-
+```html
     <table>
       <thead>
         <tr>
@@ -139,11 +137,11 @@ Ejemplo:
         </tr>
       </tbody>
     </table>
-	
+```
 Si la tabla es compleja, se debe asociar cada celda de datos con la celda de encabezados adecuada. Esto suele hacerse utilizando el atributo «scope» o el atributo «header». El atributo «header» permite realizar asociaciones más complejas permitiendo que una celda de datos disponga de varias celdas de encabezados. 
 
 Ejemplo:
-
+```html
     <table border="3">
       <caption>CALIFICACIONES</caption>
       <thead>
@@ -171,13 +169,13 @@ Ejemplo:
           </tr>
       </tbody>
     </table>
-
+```
 Hay que evitar el uso de tablas para maquetar la información, pero en caso de utilizarlas, no se deben emplear elementos o atributos propios de las tablas de datos (\<th>, \<caption>, «summary», «scope», «headers»).
 
 - Uso adecuado de «role» y «aria». Los atributos «role» y «aria» pueden utilizarse para proporcionar información adicional sobre la estructura y las relaciones entre los elementos. Por ejemplo, el atributo role="navigation" puede utilizarse para identificar una barra de navegación, y «aria-labelledby» para asociar una sección con su encabezado.
  
 Ejemplo:
-
+```html
     <nav role="navigation" aria-labelledby="nav-heading">
       <h2 id="nav-heading">Menú de navegación</h2>
       <ul>
@@ -186,7 +184,7 @@ Ejemplo:
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
-
+```
 ##### 9.1.4.1 Uso del color
 
 El color no debe ser el único medio para transmitir información. Es esencial complementar el uso del color con textos o indicadores adicionales para asegurar que la información sea accesible para todos los usuarios, incluidos aquellos con deficiencias visuales. A continuación, se presentan recomendaciones para el uso adecuado del color:
@@ -194,18 +192,18 @@ El color no debe ser el único medio para transmitir información. Es esencial c
 - Indicadores textuales. Siempre que se utilice el color para destacar información, se debe proporcionar una descripción textual que explique su significado. Por ejemplo, en lugar de confiar únicamente en el color rojo para indicar un error, se puede añadir un texto que diga «Error: Este campo es obligatorio».
 
 Ejemplo:
-
+```html
     <p><span style="color: red;">Error: </span>Este campo es obligatorio.</p>
-
+```
 - Contraste de color. El contraste entre el texto y el fondo debe cumplir con los requisitos mínimos para asegurar la legibilidad. Se recomienda una relación de contraste de al menos 4.5:1 para texto normal y 3:1 para texto grande. Herramientas como el WCAG Color Contrast Checker pueden utilizarse para verificar el contraste.
 
 Ejemplo de CSS:
-
+```css
     body {
         color: #000000;
         background-color: #ffffff;
     }
-
+```
 - No confiar únicamente en el color. Evitar situaciones en las que el color sea el único medio para transmitir información. Por ejemplo, en gráficos y diagramas, utilizar patrones o texturas adicionales para diferenciar elementos.
 
 ##### 9.2.1.1 Teclado
@@ -215,16 +213,16 @@ Todos los elementos interactivos de la página web deben ser accesibles mediante
 - Navegación con teclado. Asegurarse de que todos los enlaces, botones y campos de formulario sean accesibles y operables con el teclado. Esto se logra asegurando que estos elementos reciban el foco del teclado y puedan ser activados mediante la tecla «Enter» o la barra espaciadora.
 
 Ejemplo:
-
+```html
     <a href="#contenido" tabindex="0">Ir al contenido</a>
-
+```
 - Orden lógico del foco. Asegurarse de que el orden del foco siga una secuencia lógica e intuitiva. Esto se puede controlar utilizando el atributo «tabindex» para ajustar el orden de tabulación, aunque se recomienda mantener el orden natural del documento siempre que sea posible.
 
 Ejemplo:
-
+```html
     <div tabindex="1">Primer elemento</div>
     <div tabindex="2">Segundo elemento</div>
-
+```
 ##### 9.2.4.1 Evitar bloques
 
 Es importante que los usuarios puedan saltar bloques repetitivos, como menús de navegación, para acceder directamente al contenido principal. A continuación, se presentan recomendaciones para implementar esta funcionalidad:
@@ -232,14 +230,14 @@ Es importante que los usuarios puedan saltar bloques repetitivos, como menús de
 - Enlaces de salto. Colocar enlaces de salto al contenido principal al inicio de la página para permitir a los usuarios de teclado evitar bloques de contenido repetitivo.
 
 Ejemplo:
-
+```html
     <a href="#maincontent" class="skip-link">Saltar al contenido principal</a>
     <div id="maincontent">...</div>
-
+```
 - Estilo de los enlaces de salto. Asegurarse de que los enlaces de salto sean visibles cuando reciben el foco del teclado, pero que no interfieran con el diseño visual de la página.
 
 Ejemplo de CSS:
-
+```css
     .skip-link {
         position: absolute;
         top: -40px;
@@ -254,7 +252,7 @@ Ejemplo de CSS:
         width: auto;
         overflow: visible;
     }
-
+```
 ##### 9.2.4.3 Orden del foco
 
 El orden del foco debe seguir una secuencia lógica e intuitiva para facilitar la navegación para los usuarios de teclado. A continuación, se presentan recomendaciones para gestionar el orden del foco:
@@ -264,10 +262,10 @@ El orden del foco debe seguir una secuencia lógica e intuitiva para facilitar l
 - Uso de «tabindex». Utilizar el atributo «tabindex» con cuidado para controlar el orden del foco. Evitar valores positivos de «tabindex» a menos que sea absolutamente necesario, ya que esto puede crear una experiencia de navegación confusa, además de que aumenta la complejidad de mantenimiento y rompe la navegación lógica.
 
 Ejemplo:
-
+```html
     <div tabindex="1">Primer elemento</div>
     <div tabindex="2">Segundo elemento</div>
-
+```
 - Pruebas de navegación. Realizar pruebas de navegación con el teclado, a través del tabulador, para asegurarse de que el orden del foco sea lógico y que todos los elementos interactivos sean accesibles. Esto puede incluir pruebas internas y la recopilación de comentarios de usuarios reales.
 
 ##### 9.2.4.4 Propósito de los enlaces (en contexto)
@@ -277,21 +275,21 @@ El propósito de cada enlace debe ser claro a partir de su texto o contexto para
 - Textos de enlace descriptivos. Utilizar textos de enlace claros y descriptivos que indiquen el propósito del enlace. Evitar textos genéricos como «haga clic aquí» o «más información».
 
 Ejemplo:
-
+```html
     <a href="documento.pdf">Descargar informe de accesibilidad</a>
-
+```
 - Contexto del enlace. Proporcionar contexto adicional alrededor del enlace si es necesario para aclarar su propósito. Esto puede incluir una breve descripción antes del enlace.
 
 Ejemplo:
-
+```html
     <p>Para obtener más detalles sobre nuestras prácticas de accesibilidad, lea el <a href="politica_accesibilidad.pdf">documento completo sobre nuestra política de accesibilidad</a>.</p>
-
+```
 - Uso de «aria-label». Utilizar el atributo «aria-label» para proporcionar descripciones adicionales cuando el texto del enlace por sí solo no es suficiente.
 
 Ejemplo:
-
+```html
     <a href="documento.pdf" aria-label="Descargar informe de accesibilidad en PDF">Descargar</a>
-
+```
 ##### 9.2.4.7 Foco visible
 
 Los elementos interactivos deben tener un indicador de foco visible para que los usuarios que navegan mediante teclado puedan ver claramente qué elemento está seleccionado. A continuación, se presentan recomendaciones para asegurar la visibilidad del foco:
@@ -299,11 +297,11 @@ Los elementos interactivos deben tener un indicador de foco visible para que los
 - Estilo de foco. Utilizar CSS para proporcionar un estilo claro y visible para el foco del teclado en todos los elementos interactivos. Esto puede incluir un borde, un cambio de color de fondo o una sombra. Esto se puede lograr utilizando el «pseudo-elemento :focus».
 
 Ejemplo de CSS:
-
+```css
     a:focus, button:focus {
         outline: 3px solid #ff0000;
     }
-
+```
 - Pruebas de visibilidad. Realizar pruebas de visibilidad del foco en diferentes navegadores y dispositivos para asegurarse de que el estilo de foco sea consistente y visible en todas las plataformas.
 
 - Personalización del foco. Permitir a los usuarios personalizar el estilo del foco mediante opciones de accesibilidad en la configuración del sitio web.
@@ -315,25 +313,25 @@ Las etiquetas de los formularios deben estar claramente asociadas con sus campos
 - Asociación de etiquetas y campos. Utilizar el atributo «for» en las etiquetas y el atributo id en los campos de formulario para asegurar su asociación. Esto es fundamental para que los lectores de pantalla puedan identificar y describir correctamente cada campo.
 
 Ejemplo:
-
+```html
     <label for="nombre">Nombre:</label>
     <input type="text" id="nombre" name="nombre">
-
+```
 - Instrucciones claras. Proporcionar instrucciones claras y concisas para cada campo de formulario, indicando qué información se espera y cualquier formato específico requerido.
 
 Ejemplo:
-
+```html
     <label for="email">Correo electrónico:</label>
     <input type="email" id="email" name="email" placeholder="usuario@ejemplo.com">
-
+```
 - Uso de «aria-describedby». Utilizar el atributo «aria-describedby» para proporcionar información adicional sobre los campos de formulario, como instrucciones o mensajes de error.
 
 Ejemplo:
-
+```html
     <label for="password">Contraseña:</label>
     <input type="password" id="password" name="password" aria-describedby="passwordHelp">
     <small id="passwordHelp">La contraseña debe tener al menos 8 caracteres, incluyendo una letra mayúscula y un número.</small>
-
+```
 ##### 9.4.1.1 Procesamiento
 
 El código HTML de la página debe ser procesable sin errores por las tecnologías de asistencia. A continuación, se presentan recomendaciones para asegurar que el código sea limpio y conforme a los estándares:
@@ -352,22 +350,22 @@ Los elementos interactivos deben tener atributos «aria» adecuados para que las
 - Uso de «aria-label». Utilizar el atributo «aria-label» para proporcionar nombres claros y descriptivos a los elementos interactivos cuando el texto visible no es suficiente.
 
 Ejemplo:
-
+```html
     <button aria-label="Enviar formulario">Enviar</button>
-
+```
 - Uso de «aria-describedby». Utilizar el atributo «aria-describedby» para asociar elementos con descripciones adicionales que proporcionen contexto o instrucciones.
 
 Ejemplo:
-
+```html
     <input type="text" id="nombre" aria-describedby="nombreHelp">
     <small id="nombreHelp">Ingrese su nombre completo.</small>
-
+```
 - Uso de «role». Utilizar el atributo «role» para definir claramente la función de los elementos personalizados o aquellos que no tienen un equivalente HTML semántico directo.
 
 Ejemplo:
-
+```html
     <div role="button" tabindex="0" aria-pressed="false">Botón personalizado</div>
-
+```
 #### 2.1.2.	Nivel de criticidad Medio
 
 ##### 9.1.4.3 Contraste (mínimo)
@@ -379,12 +377,12 @@ El contraste entre el texto y su fondo debe cumplir con los requisitos mínimos 
 - Ajuste de colores. Ajustar los colores del texto y el fondo para cumplir con la relación de contraste mínima de 4.5:1 para texto normal y 3:1 para texto grande.
 
 Ejemplo de CSS:
-
+```css
     body {
         color: #000000;
         background-color: #ffffff;
     }
-
+```
 - Uso de patrones y texturas. En lugar de depender únicamente del color, utilizar patrones y texturas adicionales para diferenciar elementos, especialmente en gráficos y diagramas.
 
 ##### 9.1.4.12 Espaciado del texto
@@ -394,20 +392,20 @@ El espaciado del texto debe ser ajustable sin pérdida de contenido o funcionali
 - CSS para espaciado ajustable. Utilizar CSS para definir el espaciado del texto de manera que los usuarios puedan ajustarlo según sus necesidades sin que el contenido se desborde o se trunque.
 
 Ejemplo de CSS:
-
+```css
     body {
         line-height: 1.5;
         letter-spacing: 0.05em;
         word-spacing: 0.1em;
     }
-
+```
 - Herramientas de usuario. Proporcionar herramientas en la página que permitan a los usuarios ajustar el espaciado del texto según sus preferencias.
 
 Ejemplo de herramienta:
-
+```html
     <button onclick="document.body.style.lineHeight = '1.5';">Espaciado normal</button>
     <button onclick="document.body.style.lineHeight = '2';">Espaciado amplio</button>
-
+```
 - Pruebas de reajuste. Realizar pruebas para asegurarse de que el contenido sigue siendo legible y funcional cuando se ajusta el espaciado del texto mediante configuraciones de accesibilidad del navegador o del sistema operativo.
 
 ### 2.2.	Tipo de problema Individual 
@@ -423,16 +421,16 @@ El contenido en movimiento, parpadeante o que se desplaza debe tener controles p
 - Controles de pausa y detención. Proporcionar controles visibles y accesibles para que los usuarios puedan pausar, detener u ocultar contenido en movimiento, como carruseles de imágenes o animaciones automáticas.
 
 Ejemplo:
-
+```html
     <div>
         <marquee behavior="scroll" direction="left">Texto en movimiento</marquee>
         <button onclick="document.querySelector('marquee').stop();">Detener</button>
     </div>
-
+```
 - Configuración de animaciones. Configurar las animaciones para que se detengan automáticamente después de un corto período, o permitir que los usuarios elijan si desean que las animaciones se reproduzcan.
 
 Ejemplo de CSS:
-
+```css
     @keyframes example {
         from {background-color: red;}
         to {background-color: yellow;}
@@ -442,7 +440,7 @@ Ejemplo de CSS:
         animation-duration: 5s;
         animation-iteration-count: 1;
     }
-
+```
 ##### 9.3.1.1 Idioma de la página
 
 El idioma principal de la página debe estar declarado en el atributo «lang» del elemento \<html> para que los lectores de pantalla puedan leer el contenido con la pronunciación correcta. A continuación, se presentan recomendaciones para declarar el idioma de la página:
@@ -450,9 +448,9 @@ El idioma principal de la página debe estar declarado en el atributo «lang» d
 - Declaración del idioma principal. Asegurarse de que el atributo «lang» del elemento \<html> esté configurado correctamente para reflejar el idioma principal del contenido de la página.
 
 Ejemplo:
-
+```html
     <html lang="es">
-
+```
 - Compatibilidad con lectores de pantalla. Verificar que los lectores de pantalla y otros dispositivos de asistencia interpreten correctamente la configuración del idioma para proporcionar una experiencia de usuario óptima.
 
 #### 2.2.2.	Nivel de criticidad Media
@@ -464,17 +462,17 @@ El propósito de los campos de entrada en los formularios debe ser claro y estar
 - Etiquetas claras y descriptivas. Proporcionar etiquetas claras y descriptivas para cada campo de formulario para que los usuarios sepan qué información se requiere.
 
 Ejemplo:
-
+```html
     <label for="email">Correo electrónico:</label>
     <input type="email" id="email" name="email">
-
+```
 - Uso de atributos «autocomplete». Utilizar el atributo «autocomplete» para indicar el propósito de los campos de entrada y permitir que los navegadores sugieran valores automáticamente.
 
 Ejemplo:
-
+```html
     <label for="nombre">Nombre:</label>
     <input type="text" id="nombre" name="nombre" autocomplete="name">
-
+```
 ##### 9.1.4.10 Reajuste del texto
 
 El espaciado del texto debe ser ajustable sin pérdida de contenido o funcionalidad. A continuación, se presentan recomendaciones para asegurar que el espaciado del texto sea accesible:
@@ -482,20 +480,20 @@ El espaciado del texto debe ser ajustable sin pérdida de contenido o funcionali
 - CSS para espaciado ajustable. Utilizar CSS para definir el espaciado del texto de manera que los usuarios puedan ajustarlo según sus necesidades sin que el contenido se desborde o se trunque.
 
 Ejemplo de CSS:
-
+```css
     body {
         line-height: 1.5;
         letter-spacing: 0.05em;
         word-spacing: 0.1em;
     }
-
+```
 - Herramientas de usuario. Proporcionar herramientas en la página que permitan a los usuarios ajustar el espaciado del texto según sus preferencias.
 
 Ejemplo de herramienta:
-
+```html
     <button onclick="document.body.style.lineHeight = '1.5';">Espaciado normal</button>
     <button onclick="document.body.style.lineHeight = '2';">Espaciado amplio</button>
-
+```
 - Pruebas de reajuste. Realizar pruebas para asegurarse de que el contenido sigue siendo legible y funcional cuando se ajusta el espaciado del texto mediante configuraciones de accesibilidad del navegador o del sistema operativo.
 
 ##### 9.2.4.6 Encabezados y etiquetas
@@ -505,26 +503,26 @@ Los encabezados y las etiquetas deben ser claros y descriptivos para que los usu
 - Encabezados descriptivos. Utilizar encabezados que sean descriptivos y reflejen el contenido de la sección que representan.
 
 Ejemplo:
-
+```html
     <h1>El cuerpo humano</h1>
     <h2>Anatomía</h2>
     <h3>Músculos</h3>
     <h2>Trastornos</h2>
-
+```
 - Etiquetas descriptivas. Proporcionar etiquetas descriptivas para los campos de formulario y otros elementos interactivos para que los usuarios comprendan su propósito.
 
 Ejemplo:
-
+```html
     <label for="nombre">Nombre:</label>
     <input type="text" id="nombre" name="nombre">
-
+```
 - Uso de «aria-label» y «aria-labelledby». Utilizar atributos «aria» para proporcionar descripciones adicionales y asegurar que las tecnologías de asistencia interpreten correctamente el propósito de los elementos.
 
 Ejemplo:
-
+```html
     <button aria-labelledby="submit-label">Enviar</button>
     <span id="submit-label" class="sr-only">Enviar formulario</span>
-
+```
 ##### 9.3.1.2 Idioma de las partes
 
 El idioma de cada parte de la página que difiere del idioma principal debe estar declarado para que los lectores de pantalla puedan cambiar la pronunciación según sea necesario. A continuación, se presentan recomendaciones para declarar el idioma de las partes:
@@ -532,9 +530,9 @@ El idioma de cada parte de la página que difiere del idioma principal debe esta
 - Declaración del idioma de las partes. Utilizar el atributo «lang» para declarar el idioma de las partes del contenido que difieren del idioma principal de la página.
 
 Ejemplo:
-
+```html
     <p lang="en">This paragraph is in English, <span lang=”es”>pero este es español</span></p>
-
+```
 - Compatibilidad con lectores de pantalla. Verificar que los lectores de pantalla interpreten correctamente los cambios de idioma y ajusten la pronunciación en consecuencia.
 
 ##### 9.3.3.3 Sugerencias ante errores
@@ -544,25 +542,25 @@ Proporcionar sugerencias claras y útiles para corregir los errores de entrada e
 - Mensajes de error claros. Proporcionar mensajes de error claros y específicos que indiquen el problema y cómo corregirlo. Evitar mensajes genéricos como «Entrada inválida».
 
 Ejemplo:
-
+```html
     <label for="email">Correo electrónico:</label>
     <input type="email" id="email" name="email" aria-describedby="email-error">
     <span id="email-error" class="error">Ingrese una dirección de correo electrónico válida.</span>
-
+```
 - Uso de «aria-invalid». Utilizar el atributo «aria-invalid» para indicar que un campo de formulario contiene un valor inválido y proporcionar sugerencias para corregirlo.
 
 Ejemplo:
-
+```html
     <input type="email" id="email" name="email" aria-invalid="true">
-
+```
 - Instrucciones adicionales. Proporcionar instrucciones adicionales cerca de los campos de formulario para ayudar a los usuarios a entender cómo completar correctamente la información.
 
 Ejemplo:
-
+```html
     <label for="password">Contraseña:</label>
     <input type="password" id="password" name="password" aria-describedby="password-help">
     <small id="password-help">La contraseña debe tener al menos 8 caracteres, incluyendo una letra mayúscula y un número.</small>
-
+```
 ##### 9.4.1.3 Mensajes de estado
 
 Los mensajes de estado deben ser programáticamente determinables mediante roles o atributos «aria» para que las tecnologías de asistencia puedan informar a los usuarios sobre los cambios en la interfaz. A continuación, se presentan recomendaciones para manejar los mensajes de estado:
@@ -570,21 +568,21 @@ Los mensajes de estado deben ser programáticamente determinables mediante roles
 - Uso de «aria-live». Utilizar el atributo «aria-live» para marcar regiones de la página donde los mensajes de estado pueden cambiar dinámicamente, como notificaciones de éxito o error.
 
 Ejemplo:
-
+```html
     <div aria-live="polite" id="status-message"></div>
-
+```
 - Roles de alerta. Utilizar roles como «alert» o «status» para indicar que una región de la página contiene mensajes de estado importantes que deben ser anunciados inmediatamente por las tecnologías de asistencia.
 
 Ejemplo:
-
+```html
     <div role="alert">Error: No se pudo enviar el formulario.</div>
-
+```
 - Actualización de mensajes de estado. Asegurarse de que los mensajes de estado se actualicen correctamente en la interfaz y sean detectados por las tecnologías de asistencia.
 
 Ejemplo de JavaScript:
-
+```html
     document.getElementById('status-message').innerText = 'El formulario se ha enviado correctamente.';
-
+```
 ## 3.	Documentos no web
 
 La accesibilidad de los documentos no web, como PDFs y otros formatos, es igualmente importante para asegurar que todos los usuarios puedan acceder y comprender la información presentada. A continuación, se presentan recomendaciones detalladas basadas en los criterios de conformidad de la norma UNE-EN 301549:2022 para mejorar la accesibilidad de estos documentos. Se incluirán ejemplos para mejorar su comprensión y aplicabilidad. Los criterios de conformidad se han clasificado dependiendo del nivel de criticidad que las WCAG le hayan asignado.
