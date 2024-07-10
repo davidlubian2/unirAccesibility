@@ -43,7 +43,7 @@ Se ha detectado que la página web de la UNIR utiliza el gestor de contenidos Wo
   + Nuevas vistas y opciones de filtrado para páginas, patrones y plantillas, proporcionando una representación visual más clara y accesible de los componentes del sitio.
   
 En los siguientes apartados se realizará un estudio de cada criterio de conformidad, mostrando las recomendaciones para mejorar la accesibilidad del sitio web de la UNIR, utilizando como base los problemas detectados en el informe de revisión de la accesibilidad (línea base). 
-La numeración de los criterios de conformidad que se muestran en los siguientes apartados siguen la numeración marcada por la norma UNE-EN 301549:2022.
+<b>La numeración de los criterios de conformidad que se muestran en los siguientes apartados siguen la numeración marcada por la norma UNE-EN 301549:2022.</b>
 
 ## 2.	Páginas web
 
