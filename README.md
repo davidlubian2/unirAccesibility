@@ -1,3 +1,18 @@
+# Introducción
+
+En este proyecto se han incluído los siguientes documentos:
+- `Informe Revision Accesibilidad - sitio web.xlsx` --> Documento en formato Excel con el listado de páginas analizadas y las tecnologías detectadas empleadas en el sitio web (junto con la versión del gestor de contenidos detectada). Además, cuenta con una hoja para cada uno de los requisitos enumerados anteriormente. En cada una de estas hojas se ha incluido una tabla por cada uno de los criterios de conformidad analizados y el resultado obtenido tras su comprobación. En la hoja final del documento se recoge un resumen con los resultados obtenidos.
+  
+- `Informe de errores y hallazgos.pdf` --> Documento en formato PDF en el que se recogen todos los criterios de conformidad analizados, utilizando para ello la numeración utilizada en la norma UNE-EN 301549:2022, que, en la mayor parte, se corresponden con los criterios de conformidad de las WCAG 2.1 (en todos los casos salvo en el punto 9.6). Si al verificar un requisito o criterio de conformidad se detectó algún problema de accesibilidad, éste se recogió en dicho anexo incluyendo la siguiente información:
+  
+  +	Ubicación: en este campo se incluirá su ubicación dentro de la página.
+  +	Título: en este campo se incluirá una descripción general de dicha comprobación.
+  +	Problema: en este campo se añadirá una descripción del problema detectado.
+  +	Tipo: en el caso de que el problema afecte a todo el sitio web, en este campo se incluirá el texto «Global».
+  +	Solución: en este campo se propondrá una posible solución al problema de accesibilidad detectado.
+  
+Estos dos documentos han servido como base para la elaboración de la siguiente Metodología, aportando una visión de la situación de partida o línea base.
+
 # Metodología para el seguimiento en profundidad de la accesibilidad del sitio web UNIR
 
 ## 1.	Consideraciones previas
@@ -14,7 +29,7 @@ Para la elaboración de esta metodología se han utilizado las siguientes herram
   + Validador automático de código del W3C
   + Adobe Acrobat XI Pro para la revisión de la accesibilidad en el documento PDF
 
-Se ha detectado que la página web de la UNIR utiliza el gestor de contenidos WordPress versión 5.9.x, cuyo lenguaje de programación es PHP (WhatCMS, (s.f.)). Dicho gestor de contenidos tiene varias vulnerabilidades por lo que se recomienda actualizarlo a la versión 6.5.x (WordPress, 2024) . Además de corregir vulnerabilidades y bugs, esta versión ha incluido varias mejoras  significativas en términos de accesibilidad en comparación con la versión 5.9.x (WordPress, 2024). Entre ellas cabe destacar:
+Se ha detectado que la página web de la UNIR utiliza el gestor de contenidos WordPress versión 5.9.x, cuyo lenguaje de programación es PHP. Dicho gestor de contenidos tiene varias vulnerabilidades por lo que se recomienda actualizarlo a la versión 6.5.x. Además de corregir vulnerabilidades y bugs, esta versión ha incluido varias mejoras  significativas en términos de accesibilidad en comparación con la versión 5.9.x. Entre ellas cabe destacar:
 
 - Mejoras en la navegación por teclado y lectores de pantalla: 
   + Se han corregido problemas que impedían el acceso a los submenús del administrador para usuarios de lectores de pantalla y aquellos que navegan por teclado. 
